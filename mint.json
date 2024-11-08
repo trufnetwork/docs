@@ -7,18 +7,18 @@
 	},
 	"favicon": "/favicon.svg",
 	"colors": {
-		"primary": "#0D9373",
-		"light": "#07C983",
-		"dark": "#0D9373",
+		"primary": "#0B4299",
+		"light": "#6EA8FF",
+		"dark": "#0B4299",
 		"anchors": {
-			"from": "#0D9373",
-			"to": "#07C983"
+			"from": "#0B4299",
+			"to": "#6EA8FF"
 		}
 	},
 	"topbarLinks": [],
 	"topbarCtaButton": {
 		"name": "Github",
-		"url": "https://github.com/truf-network/docs"
+		"url": "https://github.com/truf-network/"
 	},
 	"tabs": [],
 	"anchors": [],
@@ -28,9 +28,5 @@
 			"pages": ["home"]
 		}
 	],
-	"footerSocials": {
-		"x": "https://x.com/mintlify",
-		"github": "https://github.com/mintlify",
-		"linkedin": "https://linkedin.com/company/mintlify"
-	}
+	"footerSocials": {}
 }
