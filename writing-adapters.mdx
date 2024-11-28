@@ -3,7 +3,9 @@ title: Adapter Writing Guide
 description: This guide provides a step-by-step approach to creating adapters for the Truf Network (TN). Adapters facilitate the ingestion of data from various sources into TN, leveraging the SDK and Prefect for efficient data management.
 ---
 
-# Developing Adapters for the Truf Network
+> **Note**: While this guide uses Python for examples, adapters can also be written in other languages like Go or JavaScript. Refer to the respective SDKs for more information:
+> - [Golang SDK](https://github.com/trufnetwork/truf-node-sdk-go)
+> - [JavaScript SDK](https://github.com/trufnetwork/truf-node-sdk-js)
 
 ## Prerequisites
 
@@ -51,7 +53,7 @@ The repository offers several reusable tasks to facilitate data ingestion into T
 - `task_filter_by_source_id`: Filters data based on a source ID.
 - `task_prepare_records_for_tsn`: Prepares records for insertion into TSN.
 
-## Developing a Custom Adapter
+## Developing a Custom Adapter (Python Example)
 
 1. **Define the Data Source**:
 Identify the source and format of the data you intend to ingest.
@@ -68,7 +70,7 @@ from tsn_adapters.tasks.tsn import task_insert_tsn_records
 def custom_adapter_flow():
     # Read data from the source
     data = task_read_repo_csv_file('repo_name', 'path/to/file.csv')
-    # Insert data into TN
+    # Insert data into TSN
     task_insert_tsn_records('stream_id', data)
 ```
 
@@ -94,4 +96,6 @@ Refer to the [examples directory](https://github.com/trufnetwork/adapters/tree/m
 
 - [Adapters Repository](https://github.com/trufnetwork/adapters)
 - [Python SDK Documentation](https://github.com/truflation/tsn-sdk-py)
+- [Golang SDK](https://github.com/trufnetwork/truf-node-sdk-go)
+- [JavaScript SDK](https://github.com/trufnetwork/sdk-js)
 - [Prefect Documentation](https://docs.prefect.io)
