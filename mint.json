@@ -60,6 +60,10 @@
 			]
 		},
 		{
+			"group": "Bug Report",
+			"pages": ["bug-report"]
+		},
+		{
 			"group": "Others",
 			"pages": ["ecosystem-partners", "terms-of-service", "privacy-policy"]
 		}
