@@ -38,10 +38,12 @@
 			]
 		},
 		{
-			"group": "TRUF Token",
+			"group": "Token & Governance",
 			"pages": [
 				"get-truf-token",
-				"truf-token-migration"
+				"truf-token-migration",
+				"governance",
+				"bridge"
 			]
 		},
 		{
