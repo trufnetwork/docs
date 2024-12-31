@@ -23,20 +23,47 @@
 	},
 	"tabs": [
 		{
-			"name": "Whitepaper",
-			"url": "/"
+			"name": "Developer & Node Operator",
+			"url": "/developer-node-operator"
 		},
 		{
 			"name": "Token & Governance",
 			"url": "/token-governance"
 		},
 		{
-			"name": "Developer & Node Operator",
-			"url": "/developer-node-operator"
+			"name": "Whitepaper",
+			"url": "/"
+		},
+		{
+			"name": "Bounties & Security",
+			"url": "/bounties-security"
 		}
 	],
 	"anchors": [],
 	"navigation": [
+		{
+			"group": "Developer & Node Operator",
+			"pages": [
+				"/developer-node-operator/developer-guide",
+				"/developer-node-operator/node-operator-guide",
+				"/developer-node-operator/sdks",
+				"/developer-node-operator/node-upgrade",
+				"/developer-node-operator/incentive-system",
+				"/developer-node-operator/troubleshooting-channels",
+				"/developer-node-operator/changelog"
+			]
+		},
+		{
+			"group": "Token & Governance",
+			"pages": [
+				"/token-governance/get-truf-token",
+				"/token-governance/truf-token-migration",
+				"/token-governance/tokenomics",
+				"/token-governance/staking",
+				"/token-governance/governance",
+				"/token-governance/bridge"
+			]
+		},
 		{
 			"group": "Overview",
 			"pages": ["home","abstract","introduction-overview"]
@@ -52,35 +79,13 @@
 			]
 		},
 		{
-			"group": "Token & Governance",
+			"group": "Bounties & Security",
 			"pages": [
-				"/token-governance/get-truf-token",
-				"/token-governance/truf-token-migration",
-				"/token-governance/tokenomics",
-				"/token-governance/staking",
-				"/token-governance/governance",
-				"/token-governance/bridge"
-			]
-		},
-		{
-			"group": "Developer & Node Operator",
-			"pages": [
-				"/developer-node-operator/developer-guide",
-				"/developer-node-operator/node-operator-guide",
-				"/developer-node-operator/sdks",
-				"/developer-node-operator/node-upgrade",
-				"/developer-node-operator/incentive-system",
-				"/developer-node-operator/troubleshooting-channels",
-				"/developer-node-operator/changelog"
-			]
-		},
-		{
-			"group": "Bounties",
-			"pages": [
-				"bounties-overview",
-				"data-consumer-guide",
-				"data-provider-guide",
-				"writing-adapters"
+				"/bounties-security/bounties-overview",
+				"/bounties-security/data-consumer-guide",
+				"/bounties-security/data-provider-guide",
+				"/bounties-security/writing-adapters",
+				"/bounties-security/security-audits"
 			]
 		},
 		{
