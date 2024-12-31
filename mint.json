@@ -42,6 +42,10 @@
 	"anchors": [],
 	"navigation": [
 		{
+			"group": "Overview",
+			"pages": ["home","abstract","introduction-overview"]
+		},
+		{
 			"group": "Developer & Node Operator",
 			"pages": [
 				"/developer-node-operator/developer-guide",
@@ -63,10 +67,6 @@
 				"/token-governance/governance",
 				"/token-governance/bridge"
 			]
-		},
-		{
-			"group": "Overview",
-			"pages": ["home","abstract","introduction-overview"]
 		},
 		{
 			"group": "Consumer",
