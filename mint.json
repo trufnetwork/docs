@@ -81,8 +81,25 @@
 		{
 			"group": "Running a Node",
 			"pages": [
-				"node-operator-guide"
+				"node-operator-guide",
+				"node-upgrade"
 			]
+		},
+		{
+			"group": "Incentives",
+			"pages": [
+				"incentive-system"
+			]
+		},
+		{
+			"group": "Troubleshooting",
+			"pages": [
+				"troubleshooting-channels"
+			]
+		},
+		{
+			"group": "Resources",
+			"pages": ["media-kit"]
 		},
 		{
 			"group": "Ecosystem Partners",
@@ -114,16 +131,17 @@
 			"pages": [
 				"/whitepaper/abstract",
 				"/whitepaper/introduction-overview",
-				"/whitepaper/about-truf-network"
+				"/whitepaper/about-truf-network",
+				"/whitepaper/authentication-authorization",
+				"/whitepaper/data-types",
+				"/whitepaper/billing",
+				"whitepaper/terms-of-service",
+				"whitepaper/privacy-policy"
 			]
 		},
 		{
 			"group": "Changelog",
 			"pages": ["/changelog/changelog"]
-		},
-		{
-			"group": "Others",
-			"pages": ["terms-of-service", "privacy-policy"]
 		}
 	],
 	"footerSocials": {}
