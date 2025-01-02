@@ -43,7 +43,7 @@
 	"navigation": [
 		{
 			"group": "Overview",
-			"pages": ["home","abstract","introduction-overview"]
+			"pages": ["home", "abstract", "introduction-overview"]
 		},
 		{
 			"group": "Developer & Node Operator",
@@ -93,8 +93,12 @@
 			"pages": ["bug-report"]
 		},
 		{
+			"group": "Resources",
+			"pages": ["media-kit"]
+		},
+		{
 			"group": "Others",
-			"pages": ["media-kit", "ecosystem-partners", "terms-of-service", "privacy-policy"]
+			"pages": ["ecosystem-partners", "terms-of-service", "privacy-policy"]
 		}
 	],
 	"footerSocials": {}
