@@ -66,12 +66,6 @@
 			]
 		},
 		{
-			"group": "Consuming Streams",
-			"pages": [
-				"how-to-consume"
-			]
-		},
-		{
 			"group": "Creating Streams and Indexes",
 			"pages": [
 				"developer-guide",
@@ -132,6 +126,7 @@
 				"/whitepaper/abstract",
 				"/whitepaper/introduction-overview",
 				"/whitepaper/about-truf-network",
+				"/whitepaper/consuming-data",
 				"/whitepaper/authentication-authorization",
 				"/whitepaper/data-types",
 				"/whitepaper/billing",
