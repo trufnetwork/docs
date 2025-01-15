@@ -93,7 +93,10 @@
 		},
 		{
 			"group": "Resources",
-			"pages": ["media-kit"]
+			"pages": [
+				"faq",
+				"media-kit"
+			]
 		},
 		{
 			"group": "Ecosystem Partners",
@@ -126,7 +129,10 @@
 				"/whitepaper/abstract",
 				"/whitepaper/introduction-overview",
 				"/whitepaper/about-truf-network",
+				"/whitepaper/consensus-mechanism",
+				"/whitepaper/tn-components",
 				"/whitepaper/consuming-data",
+        "/whitepaper/references",
 				"/whitepaper/authentication-authorization",
 				"/whitepaper/data-types",
 				"/whitepaper/billing",
