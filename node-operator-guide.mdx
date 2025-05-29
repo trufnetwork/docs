@@ -3,6 +3,8 @@ title: "Node Operator Guide"
 description: "Comprehensive guide to setting up and running a TRUF.NETWORK (TN) node."
 ---
 
+> **New to server setup or need a quick start?** Check our [Quick Installation Guide](https://github.com/trufnetwork/truf-node-operator/blob/main/docs/installation-guide.md) with copy-paste commands for a fresh server instance.
+
 This guide will walk you through the process of setting up and running a TRUF.NETWORK (TN) node. By following these steps, you'll be able to deploy a node, optionally become a validator, and contribute to the TN.
 
 ## Prerequisites
@@ -90,7 +92,6 @@ docker run -d -p 5432:5432 --name tn-postgres \
     --shm-size=1gb \
     kwildb/postgres:latest
 ```
-
 The command above:
 - `-v tn-pgdata:/var/lib/postgresql/data`: Creates a persistent volume named 'tn-pgdata' to store database data
 - `--shm-size=1gb`: Allocates 1GB of shared memory for PostgreSQL operations (recommended for better performance)
@@ -223,9 +224,11 @@ kwild key info --key-file ./my-node-config/nodekey.json
 
 ## Additional Resources
 
+- [Quick Installation Guide](https://github.com/trufnetwork/truf-node-operator/blob/main/docs/installation-guide.md) - Step-by-step commands for a fresh server setup
 - [Kwil Documentation](https://docs.kwil.com)
 - [Production Network Deployment Guide](https://docs.kwil.com/docs/node/production)
 
 For further assistance, join our [Discord community](https://discord.com/invite/5AMCBYxfW4) or open an issue on our [GitHub repository](https://github.com/trufnetwork/truf-node-operator/issues).
 
 Welcome to the TRUF.NETWORK! Your participation helps build a more robust and decentralized data infrastructure.
+
