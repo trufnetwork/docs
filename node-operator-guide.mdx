@@ -364,14 +364,23 @@ Use this command to check service status
 sudo systemctl status kwild
 ```
 
-Additional troubleshooting commands:
+## Docker Container Status
+
+To check the status of your Docker containers:
 ```bash
-# Check Docker container status
 docker ps
+```
 
-# Check PostgreSQL logs
+## PostgreSQL Logs
+
+To view PostgreSQL container logs:
+```bash
 docker logs tn-postgres
+```
 
-# Watch logs since last boot
+## System Boot Logs
+
+To view logs since the last system boot:
+```bash
 sudo journalctl -u kwild -b
 ```
