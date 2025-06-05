@@ -29,7 +29,13 @@ Each SDK provides comprehensive tools to interact with the TRUF.NETWORK, enablin
 
 ## Using SDKs with Your Local Node
 
-<Note>This section is intended for node operators who are running a local TRUF.NETWORK node that is fully synced with the network. If your node is not connected to the network, queries will return empty results because your local database will not contain any data. Always ensure your node is synchronized before using it as an SDK endpoint.</Note>
+<Note>
+	This section is intended for node operators who are running a local
+	TRUF.NETWORK node that is fully synced with the network. If your node is not
+	connected to the network, queries will return empty results because your local
+	database will not contain any data. Always ensure your node is synchronized
+	before using it as an SDK endpoint.
+</Note>
 
 Before you can fetch data from a stream using the SDKs, you need to know the stream's ID and the data provider address. The easiest way to discover these is by using the [TRUF.NETWORK Explorer](https://truf.network/explorer/0x4710a8d8f0d845da110086812a32de6d90d7ff5c/stai0000000000000000000000000000).
 
@@ -39,7 +45,7 @@ You can use any TRUF.NETWORK SDK (Go, TypeScript/JavaScript, Python) to interact
 
 1. **Node is fully synced:**  
    Ensure your node is fully synchronized with the network and has all data available.  
-   See the [Node Operator Guide](./node-operator-guide.mdx#7-verify-node-synchronization) for instructions on checking sync status.
+   See the [Node Operator Guide](https://github.com/trufnetwork/node/blob/main/docs/node-operator-guide.md#7-verify-node-synchronization) for instructions on checking sync status.
 
 2. **Local Endpoint:**  
    Your node should be running and exposing the HTTP API at `http://localhost:8484` (the default).
@@ -49,6 +55,6 @@ For specific implementation details, installation instructions, and comprehensiv
 ## Additional Resources
 
 - [Truflation Whitepaper](https://whitepaper.truflation.com)
-- [Node Operator Guide](./node-operator-guide.mdx)
+- [Node Operator Guide](./node-operator-guide)
 
 For support or questions, please open an issue in the respective SDK repository or contact our support team.
