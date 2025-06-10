@@ -34,12 +34,14 @@ Each SDK provides comprehensive tools to interact with the TRUF.NETWORK, enablin
 	TRUF.NETWORK node that is fully synced with the network. If your node is not
 	connected to the network, queries will return empty results because your local
 	database will not contain any data. Always ensure your node is synchronized
-	before using it as an SDK endpoint.
+	before using it as an SDK endpoint. Follow the [Node Operator
+	Guide](https://github.com/trufnetwork/node/blob/main/docs/node-operator-guide.md)
+	for instructions on connecting to the network and syncing data.
 </Note>
 
-Before you can fetch data from a stream using the SDKs, you need to know the stream's ID and the data provider address. The easiest way to discover these is by using the [TRUF.NETWORK Explorer](https://truf.network/explorer/0x4710a8d8f0d845da110086812a32de6d90d7ff5c/stai0000000000000000000000000000).
-
 You can use any TRUF.NETWORK SDK (Go, TypeScript/JavaScript, Python) to interact with your own local node, not just the public gateway. This allows you to fetch data directly from your node, which is especially useful for node operators, validators, and developers.
+
+Before you can fetch data from a stream using the SDKs, you need to know the stream's ID and the data provider address. The easiest way to discover these is by using the [TRUF.NETWORK Explorer](https://truf.network/explorer/0x4710a8d8f0d845da110086812a32de6d90d7ff5c/stai0000000000000000000000000000).
 
 ### Prerequisites
 
@@ -50,7 +52,13 @@ You can use any TRUF.NETWORK SDK (Go, TypeScript/JavaScript, Python) to interact
 2. **Local Endpoint:**  
    Your node should be running and exposing the HTTP API at `http://localhost:8484` (the default).
 
-For specific implementation details, installation instructions, and comprehensive examples, please refer to the individual SDK repositories linked above.
+### Configuration
+
+To use the SDKs with your local node, you need to configure the client to point to your local endpoint (`http://localhost:8484`) instead of the default public gateway. For detailed instructions and code examples, refer to the guide in the README of the respective SDK repository:
+
+- **Go:** [Local Node Guide](https://github.com/trufnetwork/sdk-go?tab=readme-ov-file#local-node-testing)
+- **TypeScript/JavaScript:** [Local Node Guide](https://github.com/trufnetwork/sdk-js?tab=readme-ov-file#using-the-sdk-with-your-local-node)
+- **Python:** [Local Node Guide](https://github.com/trufnetwork/sdk-py?tab=readme-ov-file#local-node-testing-and-development)
 
 ## Additional Resources
 
