@@ -5,9 +5,9 @@ description: "Learn how to interact with the TRUF.NETWORK using SDKs."
 
 The TRUF.NETWORK offers SDKs in Go, TypeScript/JavaScript, and Python to facilitate seamless integration with its decentralized platform for economic data streams.
 
-## SDK Overview
+## Using the SDKs
 
-For detailed installation, usage, and API references, please refer to the respective SDK repositories:
+To interact with a data stream you found in the explorer, your first step is to choose the SDK for your preferred language. Each repository contains the full installation instructions, API reference, and examples you'll need.
 
 - [Go SDK](https://github.com/trufnetwork/sdk-go)
 - [TypeScript/JavaScript SDK](https://github.com/trufnetwork/sdk-js)
@@ -15,7 +15,102 @@ For detailed installation, usage, and API references, please refer to the respec
 
 ### What is a `streamID`?
 
-A `streamID` is an identifier used in the TRUF.NETWORK (TN) to identify the deployed contract. It is a unique string generated from a descriptive name, such as an English name, to ensure easy reference and management of data streams.
+A `streamID` is the unique identifier for a data stream on the TRUF.NETWORK. You can find the `streamID` for any stream on its page in the TRUF.NETWORK Explorer. You will use this ID in the SDK functions to retrieve data.
+
+### How to Fetch Data from a Stream
+
+Once you have a **Stream ID** and **Data Provider** from the [TRUF.NETWORK Explorer](https://truf.network/explorer), you can use the SDKs to query its data. The SDKs provide several core methods for querying, depending on what you need to do.
+
+#### Core Query Methods
+
+The explorer may show a specific `SDK Method` for a stream (like `get_index_change`). These methods correspond to the core functions available in all our SDKs. Here are the most common ones:
+
+- **`getRecord` / `get_records`**: Retrieves the raw, original numeric values from a stream. Use this when you need the exact, unaltered data. This is the most fundamental query.
+
+- **`getIndex`**: Transforms the raw values into a normalized index (based to 100). This is useful for comparing the performance of different streams on the same scale.
+
+- **`getIndexChange`**: Calculates the percentage change of a stream's index over a specified time interval (e.g., day-over-day, year-over-year).
+
+- **Custom Procedures**: For advanced use cases, the SDKs provide a way to call any custom stored procedure defined on a stream's contract.
+
+For the exact function names and parameters, always refer to the detailed API reference in each SDK's repository.
+
+#### Conceptual Example: Fetching Raw Data (`getRecord`)
+
+Here is a conceptual example of how to use the `getRecord` method to fetch the raw data points from a stream.
+
+#### TypeScript/JavaScript
+
+```ts
+// 1. Initialize the client
+// Assumes you have a wallet and are in a Node.js environment
+const client = new NodeTNClient({
+	endpoint: "https://gateway.mainnet.truf.network",
+	signerInfo: { address: wallet.address, signer: wallet },
+});
+
+// 2. Define stream details from the explorer
+const streamLocator = {
+	streamId: StreamId.fromString("stai00...").throw(),
+	dataProvider: EthereumAddress.fromString("0x3210...").throw(),
+};
+
+// 3. Load the action client and get records
+const streamAction = client.loadAction();
+const records = await streamAction.getRecord({
+	stream: streamLocator,
+});
+
+console.log("Records:", records);
+```
+
+#### Go
+
+```go
+// 1. Initialize the client
+// Assumes you have a signer configured
+tnClient, err := tnclient.NewClient(
+	ctx,
+	"https://gateway.mainnet.truf.network",
+	tnclient.WithSigner(signer),
+)
+
+// 2. Define stream details from the explorer
+streamId := "stai00..."     // The stream's ID
+dataProvider := "0x3210..." // The data provider address
+
+// 3. Load the actions client and get records
+// The method might differ for primitive/composed streams
+actions, err := tnClient.LoadComposedActions()
+records, err := actions.GetRecord(ctx, types.GetRecordInput{
+	DataProvider: dataProvider,
+	StreamId:     streamId,
+})
+
+fmt.Println("Records:", records)
+```
+
+#### Python
+
+```python
+# 1. Initialize the client
+client = TNClient(
+    "https://gateway.mainnet.truf.network",
+    "YOUR_PRIVATE_KEY"
+)
+
+# 2. Define stream details from the explorer
+stream_id = "stai00..."
+data_provider = "0x3210..."
+
+# 3. Get records directly from the client
+records = client.get_records(
+    stream_id=stream_id,
+    data_provider=data_provider
+)
+
+print(f"Records: {records}")
+```
 
 ## SDK Capabilities
 
@@ -55,11 +150,11 @@ Before you can fetch data from a stream using the SDKs, you need to know the str
 
 ### Prerequisites
 
-1. **Node is fully synced:**  
-   Ensure your node is fully synchronized with the network and has all data available.  
+1. **Node is fully synced:**
+   Ensure your node is fully synchronized with the network and has all data available.
    See the [Node Operator Guide](https://github.com/trufnetwork/node/blob/main/docs/node-operator-guide.md#7-verify-node-synchronization) for instructions on checking sync status.
 
-2. **Local Endpoint:**  
+2. **Local Endpoint:**
    Your node should be running and exposing the HTTP API at `http://localhost:8484` (the default).
 
 ### Configuration
