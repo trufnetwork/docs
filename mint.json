@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "Whitepaper",
-			"url": "/whitepaper"
+      "url": "/whitepaper"
 		},
 		{
 			"name": "Changelog",
@@ -114,7 +114,9 @@
 		{
 			"group": "Whitepaper",
 			"pages": [
-				"/whitepaper/docs"
+				"whitepaper/docs",
+        "whitepaper/terms-of-service",
+				"whitepaper/privacy-policy"
       ]
 		},
 		{
