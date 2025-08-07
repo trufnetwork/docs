@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "Whitepaper",
-			"url": "/whitepaper"
+      "url": "/whitepaper"
 		},
 		{
 			"name": "Changelog",
@@ -114,19 +114,10 @@
 		{
 			"group": "Whitepaper",
 			"pages": [
-				"/whitepaper/abstract",
-				"/whitepaper/introduction-overview",
-				"/whitepaper/about-truf-network",
-				"/whitepaper/consensus-mechanism",
-				"/whitepaper/tn-components",
-				"/whitepaper/consuming-data",
-				"/whitepaper/references",
-				"/whitepaper/authentication-authorization",
-				"/whitepaper/data-types",
-				"/whitepaper/billing",
-				"whitepaper/terms-of-service",
+				"whitepaper/docs",
+        "whitepaper/terms-of-service",
 				"whitepaper/privacy-policy"
-			]
+      ]
 		},
 		{
 			"group": "Changelog",
